@@ -1,0 +1,189 @@
+
+		#demo-1 {
+			position: relative; /* can either be relative, absolute or fixed. If position is not set (i.e. static), it would be set to "relative" by script */
+			overflow: hidden; /* to bound the empty top space created by inner element's top margin */
+			width: 100%;
+			height: 100vh;
+			background-color: #999;
+		}
+		.demo-inner-content {
+			position: relative; /* if position is not set, the script will set it to 'relative'. */
+			z-index: 2; /* if z-index is not set, the script will set it to '2'. */
+		    font-size: 1.5em;
+		    
+
+
+		}
+	/*nav bar */
+
+	.logo{
+		position: fixed;
+		float:left;
+		margin:16px 36px;
+		color:#fff;
+		font-weight: bold;
+		font-size:30px;
+	
+	}
+	nav{
+		position:fixed;
+		width:100%;
+		background-color: rgba(0,0,0,0.4);
+		z-index: 4;
+	
+	}
+	nav ul{
+
+		background:rgba(0,0,0,0.2);
+		overflow: hidden;
+		color:#fff;
+		padding:0px;
+		text-align:center;
+		margin:0px;
+		transition: 1s;
+
+
+	}
+	
+
+	nav ul li{
+		display: inline-block;
+		padding: 20px;
+
+	}
+	nav ul li a{
+		color:#fff;
+		font-size:20px;
+		text-decoration: none !important;
+	}
+
+	.menu-icon{
+
+		
+		
+		position: relative;
+		box-sizing: border-box;
+		padding:15px 24px;
+		cursor: pointer;
+		color: #fff;
+		display:none;
+		
+		height: 68px;
+	
+	}
+
+	.menu-icon span{
+		position: relative;
+		width: 45px;
+		height: 4px;
+		background-color: #fff;
+		display: block; 
+		top:50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		box-shadow: 0 2px 2px rgba(0,0,0,.2);
+		border-radius: 2px;
+		transition: .5s;
+		transition-delay:.5s;
+
+	}
+	.menu-icon span:before{
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+		display: block;
+		top:-10px;
+		box-shadow: 0 2px 2px rgba(0,0,0,.2);
+		border-radius: 2px;
+		transition-property: top,transform;
+		transition-delay: .5s,0;
+		transition-duration: .5s,.5s;
+
+
+	}
+
+	.menu-icon span:after{
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+		display: block;
+		top: 10px;
+		box-shadow: 0 2px 2px rgba(0,0,0,.2);
+		border-radius: 2px;
+		transition-property: top,transform;
+		transition-delay: .5s,0;
+		transition-duration: .5s,.5s;
+		
+
+	}
+	.menu-icon.active span:before{
+
+		top: 0px;
+		transform:(45deg);
+		-webkit-transform: rotate(45deg); 
+		-moz-transform: rotate(45deg); 
+	}
+    .menu-icon.active span:after{
+		top:0;
+		transform:(-45deg); 
+		-webkit-transform: rotate(-45deg); 
+		-moz-transform: rotate(-45deg); 
+	}
+	.menu-icon.active span{
+		background: transparent;
+	}
+	nav ul li a:hover{
+		color: #00a98f;
+	}
+
+
+
+
+
+
+
+	/* wraping texts*/
+	.wrap{
+		width: 100%;
+		position:absolute;
+		display: block;
+		z-index: 3;
+	}
+	.head5{
+		display: block;
+		font-weight: 600;
+		color:#fff;
+		
+		line-height: 20px;
+		letter-spacing: 4.2px;
+	
+	}
+	.head1,.head2{
+		display: block;
+		color:#fff;
+		letter-spacing: 2px;
+		line-height: 1.4em;
+		text-shadow: 0 1px 2px rgba(0,0,0,0.37);
+		font-weight: 700;
+		
+	}
+div.wrap a{
+	color: #fff;
+	font-size:17px;
+	letter-spacing: 2px;
+	text-shadow: 0 1px 2px rgba(0,0,0,0.37);
+	border-bottom: 1px solid #fff;
+	font-weight: 500;
+
+}
+div.wrap a:hover{
+	color:#00a98f;
+	text-decoration: none;
+	border-bottom: 1px solid #007bff;
+	transition: 0.8s;
+
+}
